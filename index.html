@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Operations Tool</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>String Operations Utility</h1>
+            <p>Enter a string and select an operation or view all results.</p>
+        </header>
+
+        <main>
+            <section class="input-section">
+                <div class="form-group">
+                    <label for="primaryInput">Input String:</label>
+                    <textarea id="primaryInput" rows="3" placeholder="Type your text here... e.g., 'Hello World'"></textarea>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group flex-1">
+                        <label for="operationSelect">Select Operation:</label>
+                        <select id="operationSelect">
+                            <option value="all">Run All Operations</option>
+                            <option value="reverse">1. Reverse String</option>
+                            <option value="uppercase">2. Convert to Uppercase</option>
+                            <option value="palindrome">3. Check Palindrome</option>
+                            <option value="wordCount">4. Count Total Words</option>
+                            <option value="length">5. Count Total Characters</option>
+                            <option value="capitalizeWords">6. Capitalize Each Word</option>
+                            <option value="countVowels">7. Count Vowels</option>
+                            <option value="removeSpaces">8. Remove All Spaces</option>
+                            <option value="countConsonants">9. Count Consonants</option>
+                            <option value="firstLastChar">10. Get First and Last Character</option>
+                            <option value="lowercase">11. Convert to Lowercase</option>
+                            <option value="startsWithCapital">12. Starts With Capital Letter</option>
+                            <option value="repeatString">13. Repeat String (2x)</option>
+                            <option value="swapCase">14. Swap Case</option>
+                            <option value="removeVowels">15. Remove Vowels</option>
+                        </select>
+                    </div>
+
+                    <div class="button-group">
+                        <button id="submitBtn" type="button" class="btn btn-primary">Submit</button>
+                        <button id="clearBtn" type="button" class="btn btn-secondary">Clear</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="results-section">
+                <h2>Results</h2>
+                <div id="singleResultContainer" class="single-result-card hidden">
+                    <h3 id="singleResultTitle">Operation Result</h3>
+                    <div id="singleResultContent" class="result-box"></div>
+                </div>
+
+                <div id="allResultsGrid" class="results-grid">
+                    <!-- Cards populated via JS -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
